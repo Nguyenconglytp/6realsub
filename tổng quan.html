@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <title>6REALSUB</title>
+  <style>
+    .noidung {
+      width: auto;
+      height: auto;
+      margin: 0% 16% 16% 16%;
+    }
+
+    .box {
+      color: white;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(180deg, #0066ff, #6495ED);
+    }
+
+    :root {
+      --text-color: white;
+      color: var(--text-color);
+    }
+
+    #menu {
+      width: 100%;
+      height: 60%;
+    }
+
+    #menu nav {
+      list-style-type: none;
+      text-align: center;
+    }
+
+    #menu .nav-item button {
+      color: white;
+      font-size: 11px;
+    }
+
+    .body {
+      width: 100%;
+      height: 100%;
+    }
+
+    .overview-feature-content {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+      flex: 1 1 50%;
+      position: relative;
+      display: block;
+      color: #fff;
+    }
+
+    .overview-feature-content h6 {
+      color: #fff;
+    }
+
+    .overview-list {
+      -js-display: flex;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+
+    .overview-list li {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+      flex: 1 1 50%;
+      max-width: 50%;
+      margin-top: 30px;
+      font-size: 16px;
+      line-height: 22px;
+      display: inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+    }
+
+    @media screen and (max-width: 767px) {
+      .overview-list li {
+        max-width: 100%;
+      }
+    }
+
+    .overview-list li span {
+      margin-right: 10px;
+      font-size: 30px;
+      line-height: 30px;
+    }
+
+    .apps-contain,
+    .apps-contain2,
+    .apps-contain3,
+    .apps-contain4 {
+      max-width: 2220px;
+      display: inline-flex;
+    }
+
+    .apps-img,
+    .apps-img2,
+    .apps-img3,
+    .apps-img4 {
+      width: 75%;
+      margin-right: 20px;
+    }
+
+    .apps-img img,
+    .apps-img2 img,
+    .apps-img3 img,
+    .apps-img4 img {
+      width: 100%;
+      padding-top: 20px;
+    }
+
+    .apps-icons {
+      width: 35%;
+    }
+
+    .apps-icons__contain p {
+      margin: 0;
+      text-align: center;
+      font-size: 10px;
+      line-height: 1.2;
+    }
+
+    .apps-icons__contain:first-child {
+      margin-bottom: 40px;
+    }
+
+    .apps-icons__img {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 10px 0;
+    }
+
+    .apps-icons__img a:hover {
+      opacity: 0.5;
+    }
+
+    @-webkit-keyframes snowflakes-fall {
+      0% {
+        top: -10%
+      }
+
+      100% {
+        top: 100%
+      }
+    }
+
+    @-webkit-keyframes snowflakes-shake {
+
+      0%,
+      100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+      }
+
+      50% {
+        -webkit-transform: translateX(80px);
+        transform: translateX(80px)
+      }
+    }
+
+    @keyframes snowflakes-fall {
+      0% {
+        top: -10%
+      }
+
+      100% {
+        top: 100%
+      }
+    }
+
+    @keyframes snowflakes-shake {
+
+      0%,
+      100% {
+        transform: translateX(0)
+      }
+
+      50% {
+        transform: translateX(80px)
+      }
+    }
+
+    .snowflake {
+      color: #fff;
+      font-size: 1em;
+      font-family: Arial, sans-serif;
+      text-shadow: 0 0 5px #000;
+      position: fixed;
+      top: -10%;
+      z-index: 9999;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      cursor: default;
+      -webkit-animation-name: snowflakes-fall, snowflakes-shake;
+      -webkit-animation-duration: 10s, 3s;
+      -webkit-animation-timing-function: linear, ease-in-out;
+      -webkit-animation-iteration-count: infinite, infinite;
+      -webkit-animation-play-state: running, running;
+      animation-name: snowflakes-fall, snowflakes-shake;
+      animation-duration: 10s, 3s;
+      animation-timing-function: linear, ease-in-out;
+      animation-iteration-count: infinite, infinite;
+      animation-play-state: running, running;
+    }
+
+    .snowflake:nth-of-type(0) {
+      left: 1%;
+      -webkit-animation-delay: 0s, 0s;
+      animation-delay: 0s, 0s
+    }
+
+    .snowflake:nth-of-type(1) {
+      left: 10%;
+      -webkit-animation-delay: 1s, 1s;
+      animation-delay: 1s, 1s
+    }
+
+    .snowflake:nth-of-type(2) {
+      left: 20%;
+      -webkit-animation-delay: 6s, .5s;
+      animation-delay: 6s, .5s
+    }
+
+    .snowflake:nth-of-type(3) {
+      left: 30%;
+      -webkit-animation-delay: 4s, 2s;
+      animation-delay: 4s, 2s
+    }
+
+    .snowflake:nth-of-type(4) {
+      left: 40%;
+      -webkit-animation-delay: 2s, 2s;
+      animation-delay: 2s, 2s
+    }
+
+    .snowflake:nth-of-type(5) {
+      left: 50%;
+      -webkit-animation-delay: 8s, 3s;
+      animation-delay: 8s, 3s
+    }
+
+    .snowflake:nth-of-type(6) {
+      left: 60%;
+      -webkit-animation-delay: 6s, 2s;
+      animation-delay: 6s, 2s
+    }
+
+    .snowflake:nth-of-type(7) {
+      left: 70%;
+      -webkit-animation-delay: 2.5s, 1s;
+      animation-delay: 2.5s, 1s
+    }
+
+    .snowflake:nth-of-type(8) {
+      left: 80%;
+      -webkit-animation-delay: 1s, 0s;
+      animation-delay: 1s, 0s
+    }
+
+    .snowflake:nth-of-type(9) {
+      left: 90%;
+      -webkit-animation-delay: 3s, 1.5s;
+      animation-delay: 3s, 1.5s
+    }
+
+    .snowflake:nth-of-type(10) {
+      left: 25%;
+      -webkit-animation-delay: 2s, 0s;
+      animation-delay: 2s, 0s
+    }
+
+    .snowflake:nth-of-type(11) {
+      left: 65%;
+      -webkit-animation-delay: 4s, 2.5s;
+      animation-delay: 4s, 2.5s
+    }
+  </style>
+</head>
+
+<body class="box">
+  <center>
+    <h1>Hãy kết nối với chúng tôi</h1>
+  </center>
+  <div class="noidung">
+    <p>6realsub là nền tảng hỗ trợ tăng tương tác tốt nhất cho kênh Youtube của bạn, bắt đầu từ việc tìm kiếm những
+      Youtuber có ước mơ xây dựng kênh youtube triệu view từ con số không. Chúng tôi cung cấp giải pháp và công cụ để
+      kết nối cộng đồng hàng vạn Youtuber như bạn và tạo ra sức mạnh từ đó - Sức mạnh từ cộng đồng 6realsub.</p>
+    <div id="menu">
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+            type="button" role="tab" aria-controls="pills-home" aria-selected="true">CÙNG NHAU KẾT NỐI</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+            type="button" role="tab" aria-controls="pills-profile" aria-selected="false">CÙNG NHAU HỖ TRỢ</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+            type="button" role="tab" aria-controls="pills-contact" aria-selected="false">CÙNG NHAU PHÁT TRIỂN</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-produce-tab" data-bs-toggle="pill" data-bs-target="#pills-produce"
+            type="button" role="tab" aria-controls="pills-produce" aria-selected="false">CÙNG NHAU LỚN MẠNH</button>
+        </li>
+      </ul>
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+          <div class="apps-contain">
+            <div class="apps-img width-100">
+              <img src="./image/thuận1.jpg" alt="ảnh">
+            </div>
+            <div class="apps-icons width-200">
+              <div class="apps-icons_contain">
+                <h3>Cùng nhau kết nối</h3>
+                <p>Hãy tham gia với chúng tôi với cộng đồng hơn 5 ngàn thành viên và đang mở rộng mỗi ngày - những người
+                  đang tìm kiếm giá trị từ bạn và những người sẽ đem lại giá trị cho bạn.</p>
+                <ul class="overview-list">
+                  <li><span class="ti-vector"></span> Tôn trọng</li>
+                  <li><span class="ti-bar-chart"></span> Bình đẳng</li>
+                  <li><span class="ti-headphone-alt"></span> Trung thực</li>
+                  <li><span class="ti-cup"></span> Cởi mở</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+          <div class="apps-contain2">
+            <div class="apps-img2 width-200">
+              <img src="./image/thuận2.jpg" alt="ảnh">
+            </div>
+            <div class="apps-icons width-200">
+              <div class="apps-icons_contain2">
+                <h3>Cho đi - nhận lại</h3>
+                <p>Sức mạnh đến từ chính bạn chứ không phải chúng tôi, vì vậy hãy tận dụng những điều nhỏ nhặt nhất.
+                  Boostsub tạo ra công cụ để các youtuber có thể tương tác chéo cho nhau trên cơ sở tôn trọng, công
+                  bằng, trung thực qua đó tăng tương tác cho kênh của bạn từng ngày.</p>
+                <ul class="overview-list">
+                  <li><span class="ti-vector"></span> Tôn trọng</li>
+                  <li><span class="ti-bar-chart"></span> Bình đẳng</li>
+                  <li><span class="ti-headphone-alt"></span> Trung thực</li>
+                  <li><span class="ti-cup"></span> Cởi mở</li>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+          <div class="apps-contain3">
+            <div class="apps-img3 width-200">
+              <img src="./image/thuận3.jpg" alt="ảnh">
+            </div>
+            <div class="apps-icons width-200">
+              <div class="apps-icons_contain3">
+                <h3>Cùng nhau phát triển</h3>
+                <p>Muốn đi nhanh thì đi một mình - muốn đi xa, hãy đi cùng nhau. Từng bước đi của bạn trên con đường
+                  chinh phục youtube sẽ luôn có sự tiếp bước của chúng tôi</p>
+                <ul class="overview-list">
+                  <li><span class="ti-vector"></span> Tôn trọng</li>
+                  <li><span class="ti-bar-chart"></span> Bình đẳng</li>
+                  <li><span class="ti-headphone-alt"></span> Trung thực</li>
+                  <li><span class="ti-cup"></span> Cởi mở</li>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pills-produce" role="tabpanel" aria-labelledby="pills-produce-tab">
+          <div class="apps-contain4">
+            <div class="apps-img4 width-200">
+              <img src="./image/thuận4.jpg" alt="ảnh">
+            </div>
+            <div class="apps-icons width-200">
+              <div class="apps-icons_contain4">
+                <h3>Cùng nhau lớn mạnh</h3>
+                <p>Đại dương bao kia chính là được tạo thành từ những giọt nước nhỏ bé. Hãy cùng hòa chung với chúng tôi
+                  để tạo ra sức mạnh to lớn ấy, sức mạnh sẽ đẩy bạn vươn cao.</p>
+                <ul class="overview-list">
+                  <li><span class="ti-vector"></span> Tôn trọng</li>
+                  <li><span class="ti-bar-chart"></span> Bình đẳng</li>
+                  <li><span class="ti-headphone-alt"></span> Trung thực</li>
+                  <li><span class="ti-cup"></span> Cởi mở</li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❤</div>
+      </div>
+</body>
+
+</html>

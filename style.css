@@ -1,0 +1,95 @@
+body{
+    background: #282932;
+}
+
+*{
+    text-decoration: none;
+    list-style-type: none ;
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    font-family: Arial;
+}
+ .khoa{background: darkslateblue;
+    display: flex;
+    height: 4em;
+    line-height: 4em;
+    justify-content: space-between;
+}
+.logo{
+    font-size: 2em;
+    padding-left: 2em;
+}
+.menu{
+    display: flex;
+}
+.menu li {
+    padding-right: 2.5em;
+    font-size: 17px;
+}
+.menu li a:hover {
+    color: #e32879;
+    transition: color .2s ease-out;
+}
+.menu_down1 {
+    background: black;
+    width: 150px;
+    height: 23em;
+    margin: 0px auto;
+    position: absolute;
+    display: none;
+}
+.menu_down1 li {
+    text-align: center;
+    padding: 0px;
+
+}
+.menu_down1 li a:hover {
+    color: #e32879;
+}
+.menu_down2 {
+    background: black;
+    width: 140px;
+    height: 27em;
+    margin: 0px auto;
+    position: absolute;
+    display: none;
+}
+.menu_down2 li {
+    text-align: center;
+    padding: 0px;
+}
+.menu_down2 li a:hover {
+    color: #e32879;
+}
+.menu .menu_link1:hover .menu_down1 {
+    display: block;
+}
+.menu .menu_link2:hover .menu_down2 {
+    display: block;
+}
+.pro_khoa{
+    background: black;
+    width: 170px;
+    height: 12em;
+    position: absolute;
+    display: none;
+    
+}
+.pro li {
+    text-align: center;
+    padding: 0px;
+}
+.pro li a:hover{
+    color: #e32879;
+}
+.menu .pro:hover .pro_khoa{
+    display: block;
+}
+.div{
+    background: black;
+    width: 170px;
+    height: 2em;
+
+    z-index: 99999;
+}
